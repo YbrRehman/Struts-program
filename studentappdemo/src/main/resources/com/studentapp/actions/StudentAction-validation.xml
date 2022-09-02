@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+<field name="student.age">
+<field-validator type="int">
+<param name="min">20</param>
+<message>Enter appropriate age</message>
+</field-validator>
+</field>
+<field name="student.city">
+<field-validator type="requiredstring">
+<message>Enter valid city</message>
+</field-validator>
+</field>
+<field name="expression">
+         <field-validator type="regex">
+         <param name="expression">[A-Z,a-z,0-9]{6}</param>
+         <message>
+            Invalid expression, it can contain 
+            only [A-Z,a-z,0-9] and should be of 6 characters.
+         </message>
+      </field-validator>
+   </field>
+</validators>
